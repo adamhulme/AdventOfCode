@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "C5Qm9Peqkaf6jMaTrNUqMbWQbipeqaA02vw9H+zQOQeBv+3B4DQXkWHQglaTBRhJZ2rJ+Oe3JP++/PniotfGsg==",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\AoCgithub\\AdventOfCode\\Day9\\Day9.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\adam.hulme\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.21\\microsoft.netcore.app.host.win-x64.3.1.21.nupkg.sha512"
+  ],
+  "logs": []
+}
