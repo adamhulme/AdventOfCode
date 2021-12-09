@@ -234,6 +234,7 @@ namespace Day9
             // Now check remaining rows
             for (int i=1; i<collen; i++)
             {
+                // Check row start
                 current = grid[i][0];
                 c = new Coord(i, 0);
                 if (current < grid[i-1][0] && current < grid[i+1][0] && current < grid[i][1])
@@ -258,6 +259,7 @@ namespace Day9
                     }
                 }
 
+                // Check row end
                 current = grid[i][rowlen];
                 c = new Coord(i, rowlen);
                 if (current < grid[i-1][rowlen] && current < grid[i+1][rowlen] && current < grid[i][rowlen-1])
@@ -282,6 +284,7 @@ namespace Day9
                     }
                 }
 
+                // Check row middle
                 for (int j = 1; j < rowlen; j++)
                 {
                     current = grid[i][j];
