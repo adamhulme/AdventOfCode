@@ -12,30 +12,91 @@ namespace Day1
             var p = new Program();
             var input = File.ReadAllLines(@"C:\Projects\AoCgithub\AdventOfCode\2022\Day1\input.txt");
 
-            var currentElf = 0;
-            var elves = new List<int>();
-
-            for (int i=0; i<input.Length; i++)
+            // Day 2 (and I'm already sick of C#) (py time tomorrow)
+            var score = 0;
+            for (int i=0; i<input.Length; i++) 
             {
-                if (input[i] != "")
+                var answers = input[i].Split(' ');
+                var them = answers[0];
+                var me = answers[1];
+                if (me == "X")
                 {
-                    currentElf += Int32.Parse(input[i]);
+                    if (them == "A")
+                    {
+                        score += 3;
+                    }
+                    else if (them == "B")
+                    {
+                        score++;
+                    }
+                    else if (them == "C")
+                    {
+                        score += 2;
+                    }
+
                 }
-                else
+                else if (me == "Y")
                 {
-                    elves.Add(currentElf);
-                    currentElf = 0;
+                    score += 3;
+                    if (them == "A")
+                    {
+                        score += 1;
+                    }
+                    else if (them == "B")
+                    {
+                        score += 2;
+                    }
+                    else if (them == "C")
+                    {
+                        score += 3;
+                    }
+
+                }
+                else if (me == "Z")
+                {
+                    score += 6;
+                    if (them == "A")
+                    {
+                        score += 2;
+                    }
+                    else if (them == "B")
+                    {
+                        score += 3;
+                    }
+                    else if (them == "C")
+                    {
+                        score += 1;
+                    }
                 }
             }
 
+            Console.WriteLine(score);
 
-            // Part 1
-            Console.WriteLine(elves.Max());
+            // Day 1
+            //var currentElf = 0;
+            //var elves = new List<int>();
 
-            // Part 2
-            elves.Sort();
-            elves.Reverse();
-            Console.WriteLine(elves[0] + elves[1] + elves[2]);
+            //for (int i=0; i<input.Length; i++)
+            //{
+            //    if (input[i] != "")
+            //    {
+            //        currentElf += Int32.Parse(input[i]);
+            //    }
+            //    else
+            //    {
+            //        elves.Add(currentElf);
+            //        currentElf = 0;
+            //    }
+            //}
+
+
+            //// Part 1
+            //Console.WriteLine(elves.Max());
+
+            //// Part 2
+            //elves.Sort();
+            //elves.Reverse();
+            //Console.WriteLine(elves[0] + elves[1] + elves[2]);
         }
     }
 }
